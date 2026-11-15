@@ -4,22 +4,27 @@ Computer Engineer fait construire un ordinateur complet à partir d'une seule po
 NAND. Ce guide dit comment l'installer, s'en servir et régler les problèmes. Dans
 l'application, **F1** ouvre la même aide.
 
-Ce dépôt ne contient que les versions publiées : chaque [version](../../releases) porte son archive signée et la liste de ses nouveautés.
+Ce dépôt ne contient que les versions publiées : chaque [version](../../releases) porte son installateur, son archive signée et la liste de ses nouveautés.
 
 ## Installer
 
-1. Télécharge la dernière archive sur la page des versions :
+1. Télécharge l'installateur sur la page des versions :
    <https://github.com/TheoGir/computer-engineer-releases/releases/latest>
-   (`computer-engineer-vX.Y.Z-x86_64-pc-windows-msvc.zip`).
-2. Extrais-la dans un dossier à toi (clic droit, « Extraire tout »), par exemple
-   `Documents\Computer Engineer`. Ne lance pas l'application depuis l'archive sans l'extraire.
-3. Lance `computer-engineer.exe`. Au tout premier lancement, Windows peut afficher
-   « Windows a protégé votre ordinateur » : l'exécutable n'est pas signé par un certificat
-   payant. Clique sur « Informations complémentaires », puis « Exécuter quand même ».
-4. L'application pose un raccourci sur le bureau et dans le menu Démarrer (réglable dans les
-   paramètres).
+   (`computer-engineer-setup-vX.Y.Z-x86_64.exe`).
+2. Lance-le. Au tout premier lancement, Windows peut afficher « Windows a protégé votre
+   ordinateur » : l'installateur n'est pas signé par un certificat payant. Clique sur
+   « Informations complémentaires », puis « Exécuter quand même ».
+3. Clique sur « Installer » : l'application s'installe pour toi seul, sans mot de passe
+   d'administrateur, dans `%LOCALAPPDATA%\Programs\Computer Engineer`. Elle pose un raccourci
+   dans le menu Démarrer et, sauf si tu décoches la case, sur le bureau.
 
-Rien d'autre à installer : ni droits d'administrateur, ni bibliothèque.
+Elle apparaît ensuite dans les Paramètres de Windows, « Applications installées », comme toute
+application. Rien d'autre à installer : ni droits d'administrateur, ni bibliothèque.
+
+Sans installateur : l'archive `computer-engineer-vX.Y.Z-x86_64-pc-windows-msvc.zip` de la même
+page contient l'application seule. Extrais-la dans un dossier à toi (clic droit, « Extraire
+tout ») et lance `computer-engineer.exe` ; elle pose alors elle-même ses raccourcis au premier
+lancement.
 
 ## Mises à jour
 
@@ -94,6 +99,10 @@ sauvegarder ou changer d'ordinateur, copie ce dossier.
 
 ## Désinstaller
 
-Supprime le dossier où tu as extrait l'application, puis les raccourcis du bureau et du menu
-Démarrer. Tes projets restent dans `%APPDATA%\Computer Engineer` : supprime aussi ce dossier
-si tu ne veux pas les garder.
+Paramètres de Windows, « Applications » puis « Applications installées », Computer Engineer,
+« Désinstaller ». L'application, ses raccourcis et son inscription sont retirés. Tes projets
+restent dans `%APPDATA%\Computer Engineer` : supprime aussi ce dossier si tu ne veux pas les
+garder.
+
+Sans installateur (archive extraite) : supprime le dossier de l'application, puis les raccourcis
+du bureau et du menu Démarrer.
